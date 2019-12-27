@@ -1,0 +1,4 @@
+Hello %s,
+
+Thank you,
+%s
