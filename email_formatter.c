@@ -5,7 +5,7 @@
 void main(int argc, char *argv[])
 {
   FILE *fptr;
-  fptr = fopen(argv[1]z, "r");
+  fptr = fopen(argv[1], "r");
 
   // determine file size and set 
   char fsize;
