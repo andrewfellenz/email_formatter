@@ -4,28 +4,17 @@
 void main(int argc, char *argv[])
 {
   FILE *fptr;
-  fptr = fopen("./open_test.txt", "w+");
-  int i;
-  for(i=1;i<argc;i++)
-    {
-      fprintf(fptr, "%s", argv[i]);
-      fprintf(fptr,"\n");
-    }
-  fclose(fptr);
-{
-  char str[100];
-  FILE *fptr;
+  fptr = fopen("./test_template1.txt", "r");
 
-  if ((fptr = fopen("./open_test.txt", "r")) == NULL) {
-    printf("Error! opening file");
-
-    exit(1);
-}
-  fscanf(fptr, "%s",str);
-  printf("%s\n", str);
+  // determine file size and set 
+  char fsize;
   fseek(fptr, 0L, SEEK_END);
-  char sz;
-  sz = ftell(fptr);
-  printf("%d\n", sz);
-} 
+  fsize = ftell(fptr);
+  rewind(fptr);
+  char *email = malloc(fsize + 100);
+
+  fread(email, 1, fsize, fptr);
+  printf(email, argv[1], argv[2], argv[3]);
+
+  fclose(fptr);
 }

@@ -1,0 +1,8 @@
+Dear %s %s,
+
+Thank you for your interest in our program.
+I hope that you enjoy your time with us.
+
+Thanks you,
+%s
+
