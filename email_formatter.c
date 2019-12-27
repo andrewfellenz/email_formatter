@@ -8,7 +8,7 @@ void main(int argc, char *argv[])
   fptr = fopen(argv[1], "r");
 
   // determine file size and set 
-  char fsize;
+  long fsize;
   fseek(fptr, 0L, SEEK_END);
   fsize = ftell(fptr);
   rewind(fptr);
